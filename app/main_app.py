@@ -90,7 +90,7 @@ if static_files_path.exists() and static_files_path.is_dir():
 # --- Root Endpoint ---
 @app.get("/", response_class=HTMLResponse, include_in_schema=False, tags=["Root"])
 async def root():
-    return """
+    return f"""
     <html>
         <head>
             <title>Urban Air Quality API</title>
